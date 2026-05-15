@@ -13,6 +13,7 @@ namespace ServiceHostApp
             {
                 PmsmService service = new PmsmService();
                 svc = new ServiceHost(service);
+
                 svc.Open();
 
                 Console.WriteLine("Servis je pokrenut.");
