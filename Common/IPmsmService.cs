@@ -2,7 +2,7 @@ using System.ServiceModel;
 
 namespace Common
 {
-    [ServiceContract]
+    [ServiceContract(SessionMode = SessionMode.Required)]
     public interface IPmsmService
     {
         [OperationContract]

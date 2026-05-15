@@ -6,7 +6,22 @@ namespace Common
     public class SessionMeta
     {
         [DataMember]
-        public string[] Headers { get; set; }
+        public string U_q { get; set; }
+
+        [DataMember]
+        public string U_d { get; set; }
+
+        [DataMember]
+        public string Motor_Speed { get; set; }
+
+        [DataMember]
+        public string Profile_Id { get; set; }
+
+        [DataMember]
+        public string Ambient { get; set; }
+
+        [DataMember]
+        public string Torque { get; set; }
 
         [DataMember]
         public string SourceFileName { get; set; }
@@ -20,17 +35,14 @@ namespace Common
 
         public SessionMeta(string sourceFileName, int expectedRows)
         {
+            U_q = "u_q";
+            U_d = "u_d";
+            Motor_Speed = "motor_speed";
+            Profile_Id = "profile_id";
+            Ambient = "ambient";
+            Torque = "torque";
             SourceFileName = sourceFileName;
             ExpectedRows = expectedRows;
-            Headers = new string[]
-            {
-                "U_q",
-                "U_d",
-                "Motor_Speed",
-                "Profile_Id",
-                "Ambient",
-                "Torque"
-            };
         }
     }
 }
